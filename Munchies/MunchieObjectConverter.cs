@@ -19,6 +19,8 @@ namespace Munchies
 
 		public AudioClip EatSound;
 
+		public float HealPercent;
+
 		private void Awake()
 		{
 			var real = MunchieObject.CopyFrom(GetComponent<FVRPhysicalObject>(), new AudioEvent
@@ -32,6 +34,7 @@ namespace Munchies
 			real.EatEvent = EatEvent;
 			real.EatDelay = EatDelay;
 			real.DestroyOnEat = DestroyOnEat;
+			real.HealPercent = HealPercent;
 			Destroy(this);
 		}
 	}

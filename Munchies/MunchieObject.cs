@@ -12,6 +12,7 @@ namespace Munchies
 		public UnityEvent EatEvent;
 		public float EatDelay;
 		public bool DestroyOnEat;
+		public float HealPercent;
 
 		private float _lastEatTime = float.MinValue;
 		private int _currentStage;
@@ -85,6 +86,7 @@ namespace Munchies
 			_lastEatTime = Time.time;
 			SM.PlayGenericSound(EatSound, transform.position);
 			EatEvent.Invoke();
+			GM.CurrentPlayerBody.HealPercent(HealPercent);
 			if (_currentStage != EatStages.Length -  1 || DestroyOnEat) EatStages[_currentStage].SetActive(false);
 			_currentStage++;
 
