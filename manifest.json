@@ -1,15 +1,15 @@
 {
   "guid": "nrgill28.munchies",
-  "version": "0.0.0.0",
+  "version": "1.0.1",
   "dependencies": {
-    "deli.core": "0.1.0.0",
+    "deli.core": "0.2.5"
   },
   "name": "Munchies",
   "sourceUrl": "https://github.com/nrgill28/Munchies",
   "authors": [
     "Nathan Gill"
   ],
-  "assets": {
+  "runtime": {
     "Munchies.dll": "assembly"
   }
 }
